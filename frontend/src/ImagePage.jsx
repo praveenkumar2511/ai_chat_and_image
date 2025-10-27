@@ -288,7 +288,7 @@ const handleGenerateImage = async () => {
 
   try {
     // 🧠 Call your backend API (which calls Gemini + Cloudinary)
-    const response = await fetch("http://localhost:5000/gemini-img", {
+    const response = await fetch(`${process.env.REACT_APP_API_URL}/gemini-im`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ message: prompt }),
